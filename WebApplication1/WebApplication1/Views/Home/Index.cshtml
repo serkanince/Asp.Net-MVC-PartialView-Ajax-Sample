@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Hi There !!</h2>
+
+<div id="formSection">
+    @using (Ajax.BeginForm(new AjaxOptions { HttpMethod = "post", InsertionMode = InsertionMode.Replace, UpdateTargetId = "formSection" }))
+    {
+        <textarea name="message" placeholder="write something..."></textarea><br />
+        <input type="submit" value="Gönder" />
+    }
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
